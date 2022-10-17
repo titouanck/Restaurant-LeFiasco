@@ -617,7 +617,7 @@ iframe {
 	height: 500px;
 }
 
-/* SECTION "informations" */
+/* SECTION "informations" | FOOTER */
 
 @media screen and (min-width: 1200px) {
 	.informations {
@@ -633,7 +633,7 @@ iframe {
 	}
 }
 
-.informations {
+footer {
 	margin-top: -5px;
 	padding: 75px 7.5%;
 	background-color: #383837;
