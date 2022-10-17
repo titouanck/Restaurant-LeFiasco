@@ -1,0 +1,663 @@
+@font-face {
+	font-family: "Abel";
+	src: url("../fonts/Abel-Regular.ttf");
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	font-weight: lighter;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Abel", Arial, Helvetica, sans-serif;
+	letter-spacing: 4px;
+}
+
+a, li {
+	text-decoration: none;
+	color: white;
+}
+
+li {
+	list-style: none;
+}
+
+/* First block of the page with an image as a background */
+
+.main-background {
+	position: relative;
+	color: white;
+}
+
+.background {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-image: url("../img/eggs.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	opacity: 0.9;
+	filter: brightness(0.5);
+	margin: 0px;
+	top: 0px;
+	z-index: -1;
+}
+
+/* Navigation menu */
+
+header {
+	padding: 20px 0px;
+	font-size: 14px;
+}
+@media screen and (max-width: 599px) {
+	.accueil {
+		visibility: hidden;
+		margin: -20px;
+		padding: 0px;
+	}
+
+	header nav ul {
+		margin: auto;
+		text-align: center;
+	}
+
+	header nav ul a {
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width: 749px) {
+	.accueil {
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 750px) {
+	header {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+}
+
+.accueil p {
+	color: white;
+}
+
+.accueil p, .nav-pages {
+	line-height: 30px;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+
+@media screen and (min-width: 600px) {
+	nav  ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		z-index: 1;
+	}
+}
+
+/* nav  ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1;
+} */
+
+nav ul li {
+	padding: 10px 12.5px;
+	margin: 0px 5px;
+	width: fit-content;
+}
+
+#nav-reservation {
+	box-sizing: border-box;
+	border: 2px solid #bd8d43;
+	margin-left: 10px;
+}
+
+/* SECTION "welcome" */
+
+.welcome {
+	text-align: center;
+	padding: 135px 0px 215px 0px;;
+}
+
+h1, h2, h3, h4 {
+	font-weight: lighter;
+}
+
+h1 {
+	font-size: 70px;
+	z-index: 1;
+	letter-spacing: 10px
+}
+
+h2 {
+	font-size: 55px;
+	color: #bd8d43;
+}
+
+h3 {
+	font-size: 22px;
+}
+
+h4, h5 {
+	letter-spacing: 2px
+}
+
+h4 {
+	color: #bd8d43;
+	font-size: 40px;
+}
+
+h5 {
+	color: black;
+	font-size: 30px;
+	margin-bottom: 15px;
+}
+
+h6 {
+	font-size: 20px;
+	letter-spacing: 0.5px;
+	background-color: white;
+}
+p {
+	color: gray;
+}
+
+p, ul li {
+	line-height: 30px;
+	font-size: 18px;
+	letter-spacing: 0px;
+}
+
+/* SECTION "presentation" */
+
+.discover, .tasteful {
+	display: flex;
+	justify-content: center;
+	padding: 10px 0px 100px 0px;
+	align-items: center;
+}
+
+@media screen and (max-width: 945px) {
+	.discover {
+		flex-wrap: wrap;
+	}
+	
+	.tasteful {
+		flex-wrap: wrap-reverse;
+	}
+
+	.invisible {
+		margin-bottom: 30px;
+	}
+}
+
+@media screen and (min-width: 945px) {
+	
+	.discover-image-container, .tasteful-image-container {
+		outline: 2px solid #bd8d43;
+		outline-offset: -25px;
+		border: 0px solid transparent;
+		margin: -55px 5% 0 5%;
+	}
+
+	.discover-image-container {
+		border-width: 55px 0px 0px 55px;
+	}
+	
+	.tasteful-image-container {
+		border-width: 55px 55px 0px 0px;
+	}
+}
+
+@media screen and (min-width: 777px) {
+	.discover {
+		background-image: url("../img/oranges.jpg");
+		background-repeat: no-repeat;
+		background-position: right;
+	}
+
+	.tasteful {
+		background-image: url("../img/spices.jpg");
+		background-repeat: no-repeat;
+		background-position: bottom left;
+	}
+
+	.tasteful {
+		margin-bottom: -160px;
+		padding-bottom: 170px;
+	}
+}
+
+.discover-image-container, .tasteful-image-container {
+	position: relative;
+	min-width: 25%;
+}
+
+.invisible {
+	opacity: 0;
+	min-width: 100%;
+}
+
+.product-image {
+	position: absolute;
+	min-width: 100%;
+	left: 0px;
+	top: 0px;
+}
+
+.product-text {
+	width: 35%;
+	min-width: 350px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.product-text p {
+	font-size: 17px;
+}
+
+.product-link {
+	display: block;
+	margin-top: 30px;
+}
+
+.product-link p {
+	position: relative;
+	width:fit-content;
+	color: #bd8d43;
+	font-size: 17px;
+}
+
+.product-link img {
+	position: absolute;
+	height: 50%;
+	bottom: 20%;
+	right: -20px;
+}
+
+/* SECTION "menu" */
+
+.menu-principal, .reservation-principal {
+	text-align: center;
+	justify-content: center;
+	max-width: 777px;
+	margin: auto;
+}
+
+.menu-principal p, .reservation-principal p {
+	margin: 0px 2.5%;
+}
+
+.menu-principal h5 {
+	margin-bottom: 15px;
+}
+
+@media screen and (max-width: 426px) {
+	.menu-principal ul {
+		flex-wrap: wrap;
+	}
+}
+
+.menu-principal ul {
+	display: flex;
+	justify-content: center;
+	margin: 50px 0px 40px 0px;
+}
+
+.menu-principal ul li {
+	margin: 0px 20px;
+	color: black;
+	letter-spacing: 0.5px;
+}
+
+.underline {
+	border-bottom: 1.5px solid #bd8d43;
+}
+
+/* Menu propositions */
+
+@media screen and (min-width: 1200px) {
+	.menu-propositions {
+		display: grid;
+		flex-wrap: wrap;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 25px;
+		background-image: url("../img/Menu-bg-transparent.png");
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	.chef {
+		padding: 125px 7.5% 75px 7.5%;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.chef {
+		padding: 0px 7.5% 75px 7.5%;
+	}
+}
+
+@media screen and (min-width: 1015px) {
+	.chef {
+		padding: 125px 7.5% 75px 7.5%;
+		background-image: url("../img/Chef.png");
+		background-repeat: no-repeat;
+		background-position: bottom right;
+	}
+}
+
+.menu-propositions {
+	padding-left: 7.5%;
+	padding-right: 7.5%;
+}
+
+.menu-proposition {
+	display: flex;
+	margin: 50px 0px 50px 0px;
+	position: relative;
+}
+
+@media screen and (max-width: 600px) {
+	h6 {
+		margin: 15px 0px 30px 0px;
+	}
+
+	.menu-propositions {
+		padding-top: 0px;
+	}
+	
+	.menu-proposition {
+		text-align: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	
+	.proposition-2, .proposition-4 {
+		flex-wrap: wrap-reverse;
+	}
+}
+
+@media screen and (min-width: 601px) {
+	.menu-propositions {
+		padding: 40px 7.5% 60px 7.5%;
+	}
+	
+	.proposition-2, .proposition-4 {
+		justify-content: right;
+		text-align: right;
+	}
+}
+.product-text {
+	position: relative;
+}
+
+.product-text p {
+	margin-top: 10px;
+	font-size: 15px;
+	line-height: 25px;
+}
+
+.price {
+	position: absolute;
+	bottom: 0px;
+}
+
+.price p {
+	color: #bd8d43;
+}
+
+@media screen and (max-width: 600px) { 
+	.price p {
+		font-size: 18px;
+	}
+	
+	.left, .right {
+		text-align: center;
+		top: 32px;
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 601px) { 	
+	.price p {
+		font-size: 40px;
+	}
+	
+	.right {
+		text-align: right;
+		right: 0px;
+	}
+
+	.chef-text {
+		width: 75%; 
+	}
+}
+
+/* SECTION "chef" */
+
+.chef-text h5 {
+	width: 100%;
+}
+
+/* SECTION "reservation" */
+
+.reservation {
+	position: relative;
+	text-align: center;
+}
+
+.reservation-background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	background-image: url("../img/reservation.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: brightness(0.5);
+	z-index: -1;
+}
+
+.reservation-principal {
+	padding: 75px 0px 0px 0px;
+}
+
+.reservation-principal h5 {
+	color: white;
+	margin-bottom: 30px;
+}
+
+form {
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+
+.form-inputs {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.form-inputs * {
+	margin: 7.5px 15px;
+	width: 20%;
+	min-width: 190px;
+	padding: 10px 12.5px;
+	background-color: transparent;
+	border: 1px solid gray;
+	filter: brightness(0.9);
+}
+
+.form-inputs input::placeholder, .form-inputs *, #submit {
+	color: #cdcdcc;
+	letter-spacing: 2px;
+	font-size: 14px;
+}
+
+.form-inputs input:focus, form select:focus {
+	border: 1px solid #bd8d43;
+	outline-width: 0;
+}
+
+#submit {
+	background-color: #bd8d43;
+	margin-top: 50px;
+	padding: 15px 50px;
+	border: 0px;
+}
+
+/* SECTION "recipes" */
+
+.recipes {
+	padding: 75px 7.5%;
+	background-image: url("../img/news-bg.jpg");
+	background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 850px) {
+	.recipes-principal {
+		width: 65%;
+	}
+}
+
+@media screen and (max-width: 849px) {
+	.recipes-principal {
+		width: 85%;
+	}
+
+	.event-information {
+		margin-left: 35px;
+	}
+}
+
+.recipes-principal {
+	text-align: right;
+	margin-left: auto;
+}
+
+.recipes-principal p {
+	text-align: right;
+	margin-left: auto;
+	font-size: 16px;
+}
+
+.recipes-event {
+	display: flex;
+	align-items: center;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+@media screen and (min-width: 850px) {
+	.recipes-event, hr {
+		text-align: right;
+		width: 75%;
+		margin-left: auto;
+		justify-content: right;
+	}
+
+	.event-information {
+		margin-left: 80px;
+	}
+}
+
+.recipes-event, hr {
+	margin: 20px 0px 20px auto;
+}
+
+.event-information {
+	text-align: justify;
+}
+
+.event-date p {
+	text-align: center;
+	width: 100%;
+}
+
+.event-date number {
+	color: black;
+}
+
+.date-month {
+	font-size: 20px;
+}
+
+.date-number {
+	font-size: 26px;
+	color: black;
+}
+
+.recipes-link {
+	margin-right: 20px;
+	text-align: right;
+}
+
+.recipes-link p {
+	width: 100%;
+}
+
+/* MAP */
+
+iframe {
+	width: 100%;
+	height: 500px;
+}
+
+/* SECTION "informations" */
+
+@media screen and (min-width: 1200px) {
+	.informations {
+		display: grid;
+		column-gap: 75px;
+		grid-template-columns: 4fr 3fr 3fr;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.informations {
+		text-align: center;
+	}
+}
+
+.informations {
+	margin-top: -5px;
+	padding: 75px 7.5%;
+	background-color: #383837;
+	background-image: url("../img/splash.png");
+	background-repeat: no-repeat;
+	background-position: bottom right;
+}
+
+.informations div p, #final-line {
+	color: white;
+	font-size: 16px;
+	margin: auto;
+}
+
+.informations div p {
+	max-width: 600px;
+	margin-bottom: 40px;
+}
+
+.informations-h4 {
+	font-size: 20px;
+	margin: 0px 0px 10px 0px;
+}
+
+#final-line {
+	margin: 50px 0px 0px 0px;
+}
