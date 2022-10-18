@@ -1,0 +1,19 @@
+.main-background {
+	background-color: black;
+	z-index: -2;
+}
+
+.recipes-background {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-image: url("../img/salad-chicken.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	opacity: 0.6;
+	filter: brightness(0.5);
+	margin: 0px;
+	top: 0px;
+	z-index: -1;
+}
